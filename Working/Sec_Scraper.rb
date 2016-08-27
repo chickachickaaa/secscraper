@@ -2,7 +2,7 @@ require 'Nokogiri'
 require 'open-uri'
 require 'net/http'
 
-doc = Nokogiri::HTML(open("https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&datea=&dateb=&company=&type=8-k&SIC=&State=&Country=&CIK=&owner=include&accno=&start=100&count=200"))
+doc = Nokogiri::HTML(open("https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&datea=&dateb=&company=&type=8-k&SIC=&State=&Country=&CIK=&owner=include&accno=&start=0&count=100"))
 href = []
 links = doc.css('a')
 links.each do |link|
